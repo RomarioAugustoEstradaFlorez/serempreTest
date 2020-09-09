@@ -1,0 +1,11 @@
+{
+  "name": "serempretest",
+  "version": "1.0.0",
+  "description": "This is an example of a slider from scratch!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romario Estrada",
+  "license": "MIT"
+}

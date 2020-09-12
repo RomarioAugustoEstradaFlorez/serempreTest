@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.tabs {
+  margin-top: $--margin;
+  margin-top: #{$--margin * 2};
+
+  &__item {
+    &-title {
+      color: $--gray;
+      display: inline-block;
+      margin: $--mar-x;
+      outline: none;
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+
+      &--active {
+        color: $--black;
+        border-bottom: 2px solid $--black;
+        opacity: 1;
+      }
+    }
+
+    &-title:nth-child(1) {
+      margin-left: 0;
+    }
+
+  }
+
+  &__content {
+    margin-left: 0;
+    color: $--gray;
+    padding: $--pad-y;
+    margin: 0;
+  }
+}

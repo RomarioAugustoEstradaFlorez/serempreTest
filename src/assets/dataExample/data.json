@@ -1,0 +1,119 @@
+{
+  "products": [
+    {
+      "author": {
+        "name": "Romario",
+        "lastname": "Estrada"
+      },
+      "id": "1",
+      "title": "MOMEMNTUM True Wireless 2",
+      "subtitle": "Earbuds that put sound first",
+      "info_tabs": [
+        {
+          "id": "1",
+          "name": "Overview",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+        },
+        {
+          "id": "2",
+          "name": "Features",
+          "description": "Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions"
+        },
+        {
+          "id": "3",
+          "name": "What's is in the box",
+          "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }
+      ],
+      "pictures": [
+        {
+          "url": "src/assets/dataExample/products/sen-1.jpg"
+        },
+        {
+          "url": "src/assets/dataExample/products/sen-2.jpg"
+        },
+        {
+          "url": "src/assets/dataExample/products/sen-3.jpg"
+        },
+        {
+          "url": "src/assets/dataExample/products/sen-4.jpg"
+        }
+      ],
+      "properties": [
+        {
+          "name": "Customizable Touch Controls",
+          "icon": ""
+        },
+        {
+          "name": "Built-in Equalizer",
+          "icon": ""
+        },
+        {
+          "name": "Active Noice Cancellation",
+          "icon": ""
+        }
+      ],
+      "styles": [
+        {
+          "name": "Ivory White",
+          "description": "For the past 75 years, Senheiser put sound first. The new MOMENTUM True."
+        },
+        {
+          "name": "Mate Black",
+          "description": "Of all of the celestial bodies that captureour attention and fascination as astronomers."
+        }
+      ],
+      "coverage": [
+        {
+          "name": "2 years coverage",
+          "description": "For the past 75 years, Senheiser has put sound first",
+          "price": {
+            "currency": "USD",
+            "amount": 0,
+            "decimals": 0
+          }
+        },
+        {
+          "name": "3 years coverage",
+          "description": "For the past 75 years, Senheiser has put sound first",
+          "price": {
+            "currency": "USD",
+            "amount": 75,
+            "decimals": 0
+          }
+        }
+      ],
+      "features": [
+        {
+          "name": "Voice assistant support"
+        },
+        {
+          "name": "Customizable controls"
+        }
+      ],
+      "specifications": {
+        "dimensions": "76.8 x 43.8 x 34.7mm (earbuds and charging case)",
+        "usb_standard": "USB-C",
+        "power_supply": "Sennheiser 7mm dynamic driver",
+        "frequency_response": [
+          {
+            "normal": "5 - 21.000 Hz"
+          },
+          {
+            "microphone": "100 Hz to 10 kHz"
+          }
+        ],
+        "noise_cancellation": "Single MIC ANC per earbud side"
+      },
+      "free_shipping": "Get 2-day free shipping anywhere in North America.",
+      "warranty": "if anything goes wrong in the first two years, we'll replace it for free.",
+      "price": {
+        "currency": "USD",
+        "ammount": 295.5,
+        "decimals": 5
+      },
+      "thumbnail": "src/assets/dataExample/products/sen-1.jpg",
+      "condition": "NEW RELEASE"
+    }
+  ]
+}

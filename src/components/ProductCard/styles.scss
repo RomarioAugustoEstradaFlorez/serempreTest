@@ -1,0 +1,119 @@
+@import '../../styles/variables.scss';
+
+.logo {
+  border-bottom: 1px solid $--gray-light;
+  @include --box-global;
+
+  padding: $--pad-y;
+
+  & img {
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.product-detail {
+  @include --box-global;
+  background: $--white;
+  padding: $--pad-y;
+  
+  & a {
+    text-decoration: none;
+    color: $--black;
+  }
+
+  // ITEM DEFAULT
+  &__thumbnail {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border: 1px solid $--gray-light;
+    margin-bottom: 5px;
+
+    @include --mobile {
+      float: inherit;
+      max-width: inherit;
+      max-height: inherit;
+      height: inherit;
+    }
+
+    & img {
+      max-height: 100%;
+      margin: 0 auto;
+
+      @include --mobile {
+        width: 100%
+      }
+    }
+  }
+
+  // ITEMS
+  &--item {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    height: 70px;
+    max-height: 70px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid $--gray-light;
+
+    @include --mobile-sm {
+      height: 40px;
+      max-height: 40px;
+    }
+
+    & img {
+      max-height: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &--item {
+    &:nth-child(1) {
+      margin-left: 0px;
+      float: left;
+    }
+
+    &:nth-child(3) {
+      margin-right: 0px;
+      float: right;
+    }
+  }
+
+  &--item.g__col.s4 {
+    width: calc(33.33% - 7px);
+  }
+
+  // INFO
+  &__info {
+    padding-left: $--padding;
+    &--condition {
+      color: $--red;
+      font-size: $--font-x-small;
+    }
+
+    &--title {
+      margin-top: $--margin;
+      @include --font-title;
+    }
+
+    &--subtitle {
+      margin-bottom: $--margin;
+      @include --font-subtitle;
+    }
+
+    &--msg {
+      color: $--gray;
+      font-size: $--font-x-small;
+      margin-bottom: #{$--margin / 2};
+    }
+
+    &--price {
+      @include --font-title;
+    }
+  }
+}

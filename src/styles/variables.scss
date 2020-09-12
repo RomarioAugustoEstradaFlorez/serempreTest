@@ -1,0 +1,58 @@
+@import './responsive.scss';
+
+$--primary: #0097D7;
+$--secondary: #00BFED;
+$--black: #0A0C0D;
+$--gray: #687382;
+$--gray-medium: #B5BDC8;
+$--gray-light: #EEEFF3;
+$--white: #fff;
+$--red: #EE2740;
+
+$--margin: 16px;
+$--padding: 16px;
+$--pad-x: 0 16px;
+$--pad-y: 16px 0px;
+$--mar-x: 0 16px;
+$--mar-y: 16px 0px;
+$--mar-center: 0 auto;
+
+$--font-x-small: 10px;
+$--font-small: 12px;
+$--font-normal: 1rem;
+$--font-big: 1.5rem;
+$--font-super-big: 2rem;
+
+@mixin --font-title {
+  color: $--black;
+  font-size: $--font-big;
+  font-family: "Circular-Std-Bold";
+  @content;
+}
+
+@mixin --font-subtitle {
+  color: $--gray;
+  font-size: $--font-big;
+  font-family: "Circular-Std-Book";
+  font-weight: 100;
+  @content;
+}
+
+@mixin --box-global {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  margin: 0 auto;
+
+  @content;
+
+  @include --tablet {
+    width: 70%;
+  }
+
+  @include --mobile {
+    width: 100%;
+    padding: 0px 5px;
+  }
+}

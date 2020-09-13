@@ -15,7 +15,11 @@
 .product-detail {
   @include --box-global;
   background: $--white;
-  padding: $--pad-y;
+  padding-top: #{$--padding * 2};
+
+  @include --mobile {
+    padding-top: #{$--padding * 2};
+  }
 
   & a {
     text-decoration: none;
@@ -147,6 +151,11 @@
     &--desc {
       color: $--gray;
       font-size: $--font-x-small;
+      width: 90%;
+
+      @include --mobile {
+        width: 70%;
+      }
     }
 
     &--price {
@@ -173,6 +182,10 @@
       }
     }
 
+    &--full .no-margin {
+      margin: 0;
+    }
+
     &--medium {
       @include --box-border {
         height: auto;
@@ -191,9 +204,81 @@
       }
     }
   }
+
+  // TABLE
+  &__table {
+    padding-left: $--padding;
+    margin-top: #{$--margin * 2};
+
+    & .g__row {
+      border-top: 1px solid $--gray-light;
+      height: 50px;
+
+      @include --mobile {
+        margin-bottom: $--margin;
+        height: inherit;
+      }
+    }
+
+    & .g__col {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    @include --mobile {
+      padding-left: 0
+    }
+
+    @include --tablet {
+      padding-left: 0
+    }
+
+    &--title {
+      @include --font-book;
+      margin-bottom: $--margin;
+    }
+
+    &--subtitle {
+
+      @include --font-book {
+        font-weight: 600;
+      }
+
+      font-size: $--font-small;
+      padding: $--pad-y;
+      margin:0;
+
+      @include --mobile {
+        text-align: left;
+        padding-top: $--padding;
+        padding-bottom: 0;
+      }
+    }
+
+    &--desc {
+      color: $--black;
+      font-size: $--font-small;
+      text-align: right;
+      padding: $--pad-y;
+
+      @include --mobile {
+        text-align: left;
+        padding-bottom: 0;
+        padding-top: #{$--padding / 3};
+      }
+    }
+  }
 }
 
 .product-detail__box .product-detail__box--medium:nth-last-child(1) {
   margin-right: 0px;
   float: right;
+}
+
+.product-detail__table .g__row:nth-last-child(1) {
+  border-bottom: 1px solid $--gray-light;
+
+  @include --mobile {
+    padding-bottom: $--padding;
+  }
 }

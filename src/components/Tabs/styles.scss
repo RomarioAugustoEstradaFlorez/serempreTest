@@ -14,10 +14,31 @@
       text-decoration: none;
       cursor: pointer;
 
+      @include --mobile {
+        margin: 0 5px;
+        font-size: #{($--font-normal / 2) + .5};
+      }
+
       &--active {
         color: $--black;
         border-bottom: 2px solid $--black;
         opacity: 1;
+      }
+
+      &--desk {
+        display: inherit;
+
+        @include --mobile {
+          display: none;
+        }
+      }
+
+      &--mob {
+        display: none;
+
+        @include --mobile {
+          display: inherit;
+        }
       }
     }
 

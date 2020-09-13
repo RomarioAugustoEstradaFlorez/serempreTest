@@ -46,6 +46,7 @@ export const ProductCard = (product) => {
 								</p>
 
 								<Tabs data={product.info_tabs} active={1} />
+
 							</div>
 
 

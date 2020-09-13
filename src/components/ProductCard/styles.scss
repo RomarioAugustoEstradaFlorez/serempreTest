@@ -16,7 +16,7 @@
   @include --box-global;
   background: $--white;
   padding: $--pad-y;
-  
+
   & a {
     text-decoration: none;
     color: $--black;
@@ -24,14 +24,9 @@
 
   // ITEM DEFAULT
   &__thumbnail {
-    position: relative;
-    overflow: hidden;
-    float: left;
-    width: 100%;
-    height: 250px;
-    border-radius: 8px;
-    border: 1px solid $--gray-light;
-    margin-bottom: 5px;
+    @include --box-border {
+      margin-bottom: 5px;
+    }
 
     @include --mobile {
       float: inherit;
@@ -52,14 +47,13 @@
 
   // ITEMS
   &--item {
-    position: relative;
-    overflow: hidden;
-    float: left;
-    height: 70px;
-    max-height: 70px;
-    padding: 5px;
-    border-radius: 8px;
-    border: 1px solid $--gray-light;
+    @include --box-border {
+      height: 70px;
+      max-height: 70px;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
 
     @include --mobile-sm {
       height: 40px;
@@ -91,6 +85,15 @@
   // INFO
   &__info {
     padding-left: $--padding;
+
+    @include --mobile {
+      padding-left: 0
+    }
+
+    @include --tablet {
+      padding-left: 0
+    }
+
     &--condition {
       color: $--red;
       font-size: $--font-x-small;
@@ -116,4 +119,81 @@
       @include --font-title;
     }
   }
+
+  //BOXES
+  &__box {
+    padding-left: $--padding;
+    margin-top: #{$--margin * 2};
+
+    @include --mobile {
+      padding-left: 0
+    }
+
+    @include --tablet {
+      padding-left: 0
+    }
+
+    &--title {
+      @include --font-book;
+      margin-bottom: $--margin;
+    }
+
+    &--subtitle {
+      margin-top: 0;
+      color: $--black;
+      font-size: $--font-small;
+    }
+
+    &--desc {
+      color: $--gray;
+      font-size: $--font-x-small;
+    }
+
+    &--price {
+      position: absolute;
+      top: 38%;
+      right: 16px;
+      color: $--black;
+      font-family: $--bold;
+      font-size: $--font-small;
+    }
+
+    &--full {
+      @include --box-border {
+        height: auto;
+        padding: $--padding;
+        margin-bottom: $--margin;
+      }
+
+      @include --mobile {
+        float: inherit;
+        max-width: inherit;
+        max-height: inherit;
+        height: inherit;
+      }
+    }
+
+    &--medium {
+      @include --box-border {
+        height: auto;
+        padding: $--padding;
+      }
+
+      width: calc(50% - 5px);
+      margin-right: 10px;
+
+      @include --mobile {
+        width: 100%;
+        margin: 5px 0px;
+        margin-left: 0px;
+        margin-top: 5px;
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.product-detail__box .product-detail__box--medium:nth-last-child(1) {
+  margin-right: 0px;
+  float: right;
 }

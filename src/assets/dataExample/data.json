@@ -56,7 +56,7 @@
       "styles": [
         {
           "name": "Ivory White",
-          "description": "For the past 75 years, Senheiser put sound first. The new MOMENTUM True."
+          "description": "For the past 75 years, Senheiser put sound first. The new MOMENTUM True, the awesome airpods."
         },
         {
           "name": "Mate Black",
@@ -69,7 +69,7 @@
           "description": "For the past 75 years, Senheiser has put sound first",
           "price": {
             "currency": "USD",
-            "amount": 0,
+            "ammount": 0,
             "decimals": 0
           }
         },
@@ -78,7 +78,7 @@
           "description": "For the past 75 years, Senheiser has put sound first",
           "price": {
             "currency": "USD",
-            "amount": 75,
+            "ammount": 75,
             "decimals": 0
           }
         }

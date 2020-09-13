@@ -4,8 +4,8 @@ import './styles.scss'
 function TabTitle(props) {
   return (
     props.isActive === props.dataTab
-      ? <li onClick={props.onClick} className="tabs__item-title tabs__item-title--active" data-tab={props.dataTab}>{props.title}</li>
-      : <li onClick={props.onClick} className="tabs__item-title" data-tab={props.dataTab}>{props.title}</li>
+      ? <li onClick={props.onClick} className="tabs__item-title tabs__item-title--active" data-tab={props.dataTab} href="">{props.title}</li>
+      : <li onClick={props.onClick} className="tabs__item-title" data-tab={props.dataTab} href="">{props.title}</li>
   )
 }
 

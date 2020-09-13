@@ -26,7 +26,9 @@ export const ProductCard = (product) => {
 					</div>
 				</div>
 				<div className="product-detail">
+
 					<div className="g__row">
+
 						<div className="g__col s12 m12 l6">
 							<div className="product-detail__thumbnail">
 								<Img className="img--responsive product-detail__thumbnail--img" src={product.thumbnail} />
@@ -57,6 +59,31 @@ export const ProductCard = (product) => {
 								</p>
 
 								<Tabs data={product.info_tabs} active={1} />
+							</div>
+
+							<div className="g__row product-detail__box">
+								<h1 className="product-detail__box--title">Choose your finish.</h1>
+								{product.styles.map(style => {
+									return (
+										<div className="product-detail__box--medium" >
+											<h4 className="product-detail__box--subtitle">{style.name}</h4>
+											<p className="product-detail__box--desc">{style.description}</p>
+										</div>
+									)
+								})}
+							</div>
+
+							<div className="g__row product-detail__box">
+								<h1 className="product-detail__box--title">Would you like to add extended warranty coverage.</h1>
+								{product.coverage.map(item => {
+									return (
+										<div className="product-detail__box--full" >
+											<h4 className="product-detail__box--subtitle">{item.name}</h4>
+											<p className="product-detail__box--desc">{item.description}</p>
+											<span className="product-detail__box--price">{item.price.ammount !== 0 ? `$ ${item.price.ammount}` : ""}</span>
+										</div>
+									)
+								})}
 							</div>
 
 						</div>

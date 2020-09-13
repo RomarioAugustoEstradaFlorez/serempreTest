@@ -9,6 +9,10 @@ $--gray-light: #EEEFF3;
 $--white: #fff;
 $--red: #EE2740;
 
+$--bold: "Circular-Std-Bold";
+$--medium: "Circular-Std-Medium";
+$--book: "Circular-Std-Book";
+
 $--margin: 16px;
 $--padding: 16px;
 $--pad-x: 0 16px;
@@ -23,18 +27,37 @@ $--font-normal: 1rem;
 $--font-big: 1.5rem;
 $--font-super-big: 2rem;
 
+@mixin --font-book {
+  color: $--black;
+  font-size: $--font-normal;
+  font-family: $--book;
+  font-weight: 100;
+  @content;
+}
+
 @mixin --font-title {
   color: $--black;
   font-size: $--font-big;
-  font-family: "Circular-Std-Bold";
+  font-family: $--bold;
   @content;
 }
 
 @mixin --font-subtitle {
   color: $--gray;
   font-size: $--font-big;
-  font-family: "Circular-Std-Book";
+  font-family: $--book;
   font-weight: 100;
+  @content;
+}
+
+@mixin --box-border {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  border: 1px solid $--gray-light;
   @content;
 }
 

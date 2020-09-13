@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+// ITEM DEFAULT
+.item__content {
+  @include --box-border {
+    margin-bottom: 5px;
+  }
+
+  @include --mobile {
+    float: inherit;
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+  }
+
+  & img {
+    max-height: 100%;
+    margin: 0 auto;
+
+    @include --mobile {
+      width: 100%
+    }
+  }
+}
+
+// ITEMS
+.item__slide {
+  cursor: pointer;
+
+  @include --box-border {
+    height: 70px;
+    max-height: 70px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+
+  @include --mobile-sm {
+    height: 40px;
+    max-height: 40px;
+  }
+
+  & img {
+    max-height: 100%;
+    margin: 0 auto;
+  }
+
+  &.active {
+    border: 1px solid $--primary;
+
+    &:hover {
+      border: 1px solid $--primary;
+    }
+
+    &:focus {
+      border: 1px solid $--primary;
+    }
+  }
+}
+
+.item__slide {
+  &:hover {
+    border: 1px solid $--gray-medium;
+  }
+
+  &:nth-child(1) {
+    margin-left: 0px;
+    float: left;
+  }
+
+  &:nth-child(3) {
+    margin-right: 0px;
+    float: right;
+  }
+
+
+}
+
+.item__slide.g__col.s4 {
+  width: calc(33.33% - 7px);
+}

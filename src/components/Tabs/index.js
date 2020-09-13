@@ -10,11 +10,8 @@ var truncate = (str, length) => {
   return str.length > 0 ? str.substring(0, length) + dots : str;
 }
 function TabTitle(props) {
-  // var jueputa = <span className="tabs__item-title--desk">{props.title}</span><span className="tabs__item-title--mob">{truncate(props.title, 9)}</span>
   return (
     props.isActive === props.dataTab
-      // ? <li onClick={props.onClick} className="tabs__item-title tabs__item-title--active" data-tab={props.dataTab} href=""><span className="tabs__item-title--desk">{props.title}</span><span className="tabs__item-title--mob">{truncate(props.title, 9)}</span></li>
-      // : <li onClick={props.onClick} className="tabs__item-title" data-tab={props.dataTab} href=""><span className="tabs__item-title--desk">{props.title}</span><span className="tabs__item-title--mob">{truncate(props.title, 9)}</span></li>
       ? <li onClick={props.onClick} className="tabs__item-title tabs__item-title--active" data-tab={props.dataTab}>{props.title}</li>
       : <li onClick={props.onClick} className="tabs__item-title" data-tab={props.dataTab}>{props.title}</li>
   )

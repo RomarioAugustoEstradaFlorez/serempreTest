@@ -4,11 +4,9 @@
   border-bottom: 1px solid $--gray-light;
   @include --box-global;
 
-  padding: $--pad-y;
-
   & img {
-    width: 100px;
-    margin: 0 auto;
+    width: 50px;
+    margin: $--margin auto;
   }
 }
 
@@ -24,66 +22,6 @@
   & a {
     text-decoration: none;
     color: $--black;
-  }
-
-  // ITEM DEFAULT
-  &__thumbnail {
-    @include --box-border {
-      margin-bottom: 5px;
-    }
-
-    @include --mobile {
-      float: inherit;
-      max-width: inherit;
-      max-height: inherit;
-      height: inherit;
-    }
-
-    & img {
-      max-height: 100%;
-      margin: 0 auto;
-
-      @include --mobile {
-        width: 100%
-      }
-    }
-  }
-
-  // ITEMS
-  &--item {
-    @include --box-border {
-      height: 70px;
-      max-height: 70px;
-      padding: 5px;
-      margin-bottom: 5px;
-    }
-
-
-    @include --mobile-sm {
-      height: 40px;
-      max-height: 40px;
-    }
-
-    & img {
-      max-height: 100%;
-      margin: 0 auto;
-    }
-  }
-
-  &--item {
-    &:nth-child(1) {
-      margin-left: 0px;
-      float: left;
-    }
-
-    &:nth-child(3) {
-      margin-right: 0px;
-      float: right;
-    }
-  }
-
-  &--item.g__col.s4 {
-    width: calc(33.33% - 7px);
   }
 
   // INFO

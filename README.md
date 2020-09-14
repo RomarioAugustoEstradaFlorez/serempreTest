@@ -4,9 +4,11 @@
 
 This project was generated with [ReactJs](https://es.reactjs.org/docs/getting-started.html) version 16.13.1
 
-This web application works with ReactJs and it shows a detail of a product, I did a slider and tabs from scratch usinsg `React.Component` Syntax ECMA Script 6, I use `SASS`, `styled components` and `react-icons`.
+This web application works with ReactJs and it shows a detail of a product, I did a slider and tabs from scratch usinsg `React.Component`.
 
-I create Variables.scss to use global behaviours and I use mixins too.
+The ECMA Script 6 and I use `SASS`, `styled components` and `react-icons` for the styles and I put my own grid behaviour.
+
+I create `variables.scss` to use global behaviours and I use mixins too.
 
 Special thanks go to:
 - [Romario Estrada](http://www.romaef.com) for his nice develop.

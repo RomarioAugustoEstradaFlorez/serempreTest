@@ -10,10 +10,15 @@
   }
 }
 
+.float-right {
+  float: right;
+}
+
 .product-detail {
   @include --box-global;
   background: $--white;
   padding-top: #{$--padding * 2};
+  margin-bottom: #{$--margin * 8};
 
   @include --mobile {
     padding-top: #{$--padding * 2};
@@ -62,6 +67,53 @@
     }
   }
 
+  // PROPERTIES
+  &__properties {
+    display: none;
+    text-align: center;
+    margin-top: #{$--margin * 2};
+    margin-bottom: #{$--margin * 3};
+
+    & p {
+      @include --font-book {
+        font-size: $--font-small;
+      }
+
+      margin-bottom: $--margin;
+    }
+
+    & svg {
+      font-size: $--font-big;
+    }
+
+    @include --tablet {
+      display: initial;
+    }
+
+    &--mobile-only {
+      display: none;
+      text-align: center;
+      margin-top: #{$--margin * 2};
+      margin-bottom: #{$--margin * 3};
+
+      & p {
+        @include --font-book {
+          font-size: $--font-small;
+        }
+
+        margin-bottom: $--margin;
+      }
+
+      & svg {
+        font-size: $--font-big;
+      }
+
+      @include --mobile {
+        display: initial;
+      }
+    }
+  }
+
   //BOXES
   &__box {
     padding-left: $--padding;
@@ -106,6 +158,8 @@
     }
 
     &--full {
+      cursor: pointer;
+
       @include --box-border {
         height: auto;
         padding: $--padding;
@@ -118,6 +172,22 @@
         max-height: inherit;
         height: inherit;
       }
+
+      &.active {
+        border: 1px solid $--primary;
+
+        &:hover {
+          border: 1px solid $--primary;
+        }
+
+        &:focus {
+          border: 1px solid $--primary;
+        }
+      }
+
+      &:hover {
+        border: 1px solid $--gray-medium;
+      }
     }
 
     &--full .no-margin {
@@ -125,6 +195,8 @@
     }
 
     &--medium {
+      cursor: pointer;
+
       @include --box-border {
         height: auto;
         padding: $--padding;
@@ -139,6 +211,22 @@
         margin-left: 0px;
         margin-top: 5px;
         margin-right: 0px;
+      }
+
+      &.active {
+        border: 1px solid $--primary;
+
+        &:hover {
+          border: 1px solid $--primary;
+        }
+
+        &:focus {
+          border: 1px solid $--primary;
+        }
+      }
+
+      &:hover {
+        border: 1px solid $--gray-medium;
       }
     }
   }

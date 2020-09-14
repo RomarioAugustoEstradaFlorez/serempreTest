@@ -81,3 +81,27 @@ body {
     height: auto;
   }
 }
+
+.button {
+  border-radius: 6px;
+  border: 1px solid $--white;
+  display: inline-block;
+  cursor: pointer;
+  color: $--white;
+  font-family: $--bold;
+  font-size: $--font-normal;
+  padding: $--padding #{$--padding};
+  text-decoration: none;
+
+  &__primary {
+    background-color: $--primary;
+
+    &:hover {
+      background-color: $--secondary;
+    }
+  }
+
+  &--full {
+    width: 100%
+  }
+}

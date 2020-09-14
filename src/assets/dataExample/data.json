@@ -42,29 +42,32 @@
       "properties": [
         {
           "name": "Customizable Touch Controls",
-          "icon": ""
+          "icon": "MdTouchApp"
         },
         {
           "name": "Built-in Equalizer",
-          "icon": ""
+          "icon": "BiEqualizer"
         },
         {
           "name": "Active Noice Cancellation",
-          "icon": ""
+          "icon": "ImSoundcloud"
         }
       ],
       "styles": [
         {
+          "id": "1",
           "name": "Ivory White",
           "description": "For the past 75 years, Senheiser put sound first. The new MOMENTUM True, the awesome airpods."
         },
         {
+          "id": "2",
           "name": "Mate Black",
-          "description": "Of all of the celestial bodies that captureour attention and fascination as astronomers."
+          "description": "Of all of the celestial bodies that capture our attention and fascination as astronomers and muscicians."
         }
       ],
       "coverage": [
         {
+          "id": "1",
           "name": "2 years coverage",
           "description": "For the past 75 years, Senheiser has put sound first",
           "price": {
@@ -74,6 +77,7 @@
           }
         },
         {
+          "id": "2",
           "name": "3 years coverage",
           "description": "For the past 75 years, Senheiser has put sound first",
           "price": {
@@ -85,6 +89,7 @@
       ],
       "features": [
         {
+          "id": "1",
           "name": "Voice assistant support",
           "price": {
             "currency": "",
@@ -93,6 +98,7 @@
           }
         },
         {
+          "id": "2",
           "name": "Customizable controls",
           "price": {
             "currency": "USD",

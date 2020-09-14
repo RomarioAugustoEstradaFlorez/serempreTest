@@ -1,4 +1,7 @@
 import React, { Fragment } from 'react'
+import { MdTouchApp } from 'react-icons/md'
+import { BiEqualizer } from 'react-icons/bi'
+import { ImSoundcloud } from 'react-icons/im'
 import './styles.scss'
 import { Img } from './styles'
 
@@ -17,7 +20,6 @@ function SlideItem(props) {
 }
 
 function SlideContent(props) {
-  // console.log(props.dataSlide)
   return (
     <div style={props.style} className="item__content">
       <Img data-slide={props.dataSlide} className="img--responsive item__content--img" src={props.picture} />
@@ -38,7 +40,6 @@ class Slider extends React.Component {
 
   render() {
     var listItems = this.props.data.map((item) => {
-      var onResize = window.onresize;
       return (
         <SlideItem onClick={this.changeActive} key={item.id} isActive={this.state.isActive} dataSlide={item.id} picture={item.url} />
       )
@@ -53,12 +54,29 @@ class Slider extends React.Component {
     )
     return (
       <Fragment>
-        <div className="g__row">
-          {listContent}
+        <div className="g__col s12 m12 l5 slider">
+          <div className="g__row">
+            {listContent}
+          </div>
+          <div className="g__row">
+            {listItems}
+          </div>
+          <div className="g__row">
+            <div className="properties">
+              {this.props.properties.map((property, i) => {
+                return (
+                  <div key={i} className="g__col s12 m4 l4">
+                    {property.icon == "MdTouchApp" && <MdTouchApp />}
+                    {property.icon == "BiEqualizer" && <BiEqualizer />}
+                    {property.icon == "ImSoundcloud" && <ImSoundcloud />}
+                    <p>{property.name}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
         </div>
-        <div className="g__row">
-          {listItems}
-        </div>
+
       </Fragment>
     )
   }

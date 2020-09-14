@@ -1,5 +1,45 @@
 @import '../../styles/variables.scss';
 
+.slider {
+  position: fixed;
+  top: #{$--margin * 7.4};
+  left: #{$--margin * 5.8};
+
+  @include --tablet {
+    position: inherit;
+  }
+
+  @include --mobile {
+    position: inherit;
+  }
+}
+
+.properties {
+  text-align: center;
+  margin-top: #{$--margin};
+
+  & p {
+    @include --font-book {
+      font-size: $--font-small;
+    }
+
+    margin-bottom: $--margin;
+  }
+
+  & svg {
+    font-size: $--font-big;
+  }
+
+  @include --tablet {
+    display: none;
+  }
+
+  @include --mobile {
+    display: none;
+  }
+
+}
+
 // ITEM DEFAULT
 .item__content {
   @include --box-border {
